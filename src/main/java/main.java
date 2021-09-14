@@ -2,16 +2,58 @@ import java.util.Scanner;
 
 public class main {
     static int totalValue = 0;
-    static int x = 0;
-    static int y = 9;
+
+    enum type {
+        WARM,
+        COLD,
+        UNKNOWN
+    }
+
     public static void main(String[] args) {
+        //excersize1();
+        //excersize2();
+        excersize3()
+    }
+
+    private static void excersize2() {
+        System.out.println("Enter season of choice");
+        Scanner sc = new Scanner(System.in);
+
+        String seasonSubmited = sc.next();;
+        switch(seasonSubmited) {
+            case "Zomer":
+                System.out.println(type.WARM);
+                break;
+            case "Lente":
+                System.out.println(type.WARM);
+                break;
+            case "Winter":
+                System.out.println(type.COLD);
+                break;
+            case "Herfst":
+                System.out.println(type.COLD);
+                break;
+            default:
+                System.out.println(type.UNKNOWN);
+
+        }
+
+        public void excersize3(){
+
+        }
+
+
+    }
+
+    private static void excersize1() {
         userAddNumber();
         calculateOk();
     }
 
-
     private static void userAddNumber() {
         int[] numbers = new int[9];
+        int y = 9;
+        int x = 0;
         System.out.println("Enter Accountnumber");
         Scanner sc = new Scanner(System.in);  // Create a Scanner object
 
